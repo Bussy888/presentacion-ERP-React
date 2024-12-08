@@ -116,9 +116,9 @@ const Presentacion = () => {
             <b>DESCARGAR ARCHIVOS:</b>
         </>
       ),
-      archivos: [
-        { nombre: "TDR1.pdf", url: "/path/to/TDR1.pdf" },
-        { nombre: "Carta_inicio.pdf", url: "/path/to/Carta_inicio.pdf" }
+      archivos: [   
+        { nombre: "TDR1.pdf", url: "/downloads/TDR1.pdf" },
+        { nombre: "Carta_inicio.pdf", url: "/downloads/Carta_inicio.pdf" }
       ]
     },
     {
@@ -234,32 +234,127 @@ const Presentacion = () => {
       contenido: (
         <>
           <h3>4.1 Pruebas y control de calidad</h3>
-          <p>Descripción de pruebas...</p>
+          <p>
+            Las pruebas y el control de calidad son fundamentales para garantizar que el sistema ERP cumpla con los requisitos funcionales, de rendimiento y seguridad antes de su despliegue final. Se llevaron a cabo los siguientes tipos de pruebas:
+          </p>
+          <ul>
+            <li>
+              <strong>Pruebas unitarias:</strong> Validación de cada componente o módulo del sistema para asegurar que funcionan correctamente de forma independiente.
+            </li>
+            <li>
+              <strong>Pruebas de integración:</strong> Verificación de la interacción entre diferentes módulos del sistema para garantizar que se comunican y operan como se espera.
+            </li>
+            <li>
+              <strong>Pruebas de rendimiento:</strong> Evaluación del tiempo de respuesta, la capacidad de procesamiento y la estabilidad del sistema bajo cargas de trabajo reales y simuladas.
+            </li>
+            <li>
+              <strong>Pruebas de seguridad:</strong> Auditorías de seguridad para identificar y mitigar vulnerabilidades, incluyendo pruebas de penetración y análisis de cifrado de datos.
+            </li>
+            <li>
+              <strong>Pruebas de aceptación:</strong> Validación final realizada por usuarios clave para asegurar que el sistema cumple con las expectativas y requisitos establecidos.
+            </li>
+          </ul>
+          <p>
+            Cada fase de pruebas se documentó detalladamente, registrando los resultados, los problemas encontrados y las acciones correctivas tomadas. Esto asegura un sistema confiable y robusto listo para su implementación.
+          </p>
+    
           <h3>4.2 Selección del servidor y configuración</h3>
-          <p>Descripción de la configuración...</p>
+          <p>
+            Para alojar el sistema ERP, se eligió Amazon Web Services (AWS) debido a su flexibilidad, escalabilidad y robustez. Las configuraciones realizadas fueron las siguientes:
+          </p>
+          <ul>
+            <li>
+              <strong>Instancia de servidor:</strong> Se utilizó Amazon EC2 (Elastic Compute Cloud) para alojar el backend del ERP. Se eligió una instancia de tipo <code>t3.medium</code>, ideal para cargas de trabajo de nivel medio con capacidad de escalar según sea necesario.
+            </li>
+            <li>
+              <strong>Almacenamiento de datos:</strong> Amazon RDS (Relational Database Service) se configuró con una base de datos MySQL para garantizar un almacenamiento seguro y escalable.
+            </li>
+            <li>
+              <strong>Almacenamiento de archivos:</strong> Se utilizó Amazon S3 (Simple Storage Service) para almacenar documentos y otros archivos generados por el sistema ERP.
+            </li>
+            <li>
+              <strong>Balanceo de carga:</strong> Se implementó Elastic Load Balancer (ELB) para distribuir el tráfico de usuarios entre varias instancias de servidor y garantizar alta disponibilidad.
+            </li>
+            <li>
+              <strong>Seguridad:</strong> Se configuraron Grupos de Seguridad (Security Groups) y AWS WAF (Web Application Firewall) para proteger el sistema contra accesos no autorizados y amenazas externas.
+            </li>
+            <li>
+              <strong>Despliegue continuo:</strong> AWS CodePipeline y AWS CodeDeploy se utilizaron para automatizar el proceso de despliegue, garantizando que las actualizaciones se realicen de manera rápida y confiable.
+            </li>
+          </ul>
+          <p>
+            Antes del lanzamiento, se realizaron pruebas de estrés en el servidor para verificar su capacidad de manejo de usuarios concurrentes y garantizar la estabilidad del sistema bajo diferentes condiciones de uso. Esto aseguró que el sistema ERP esté listo para operar con alta disponibilidad y rendimiento.
+          </p>
         </>
-      ),
-      archivos: [
-        { nombre: "Pruebas_y_control.pdf", url: "/path/to/Pruebas_y_control.pdf" }
-      ]
-    },
+      )
+    }
+    ,    
     {
       titulo: "Fase de Cierre",
       contenido: (
         <>
           <h3>5.1 Evaluación y feedback</h3>
-          <p>Descripción de evaluación...</p>
+          <p>
+            La evaluación y el feedback del sistema ERP se llevaron a cabo utilizando diversas metodologías para garantizar que el sistema cumpla con las expectativas de los usuarios y los objetivos del proyecto. Las metodologías empleadas incluyen:
+          </p>
+          <ul>
+            <li>
+              <strong>Pruebas de Usuario:</strong> Evaluación directa por parte de usuarios finales para identificar problemas de usabilidad y funcionalidad.<br />
+              <strong>Ejemplo:</strong> Un grupo de empleados de Pollos Copacabana probó el módulo de inventarios para verificar su facilidad de uso y precisión.<br />
+              <strong>Conclusión:</strong> Se ajustaron algunos flujos de trabajo basados en sus comentarios.
+            </li>
+            <li>
+              <strong>Pruebas de Aceptación del Cliente (UAT):</strong> Validación realizada por representantes clave de la empresa para asegurar que el sistema cumple con los requisitos.<br />
+              <strong>Ejemplo:</strong> Los gerentes de sucursal revisaron la funcionalidad del módulo de ventas y aprobaron su implementación tras pequeños ajustes.<br />
+              <strong>Conclusión:</strong> El sistema fue aprobado para su despliegue.
+            </li>
+            <li>
+              <strong>Monitoreo Post-Lanzamiento:</strong> Recolección de métricas y observaciones durante las primeras semanas de uso.<br />
+              <strong>Ejemplo:</strong> Se analizaron tiempos de respuesta y errores reportados por los usuarios.<br />
+              <strong>Conclusión:</strong> No se detectaron fallos críticos, y las áreas reportaron mejoras significativas en sus procesos.
+            </li>
+            <li>
+              <strong>Análisis de Métricas de Rendimiento:</strong> Evaluación de KPIs clave, como tiempos de respuesta y disponibilidad.<br />
+              <strong>Ejemplo:</strong> El tiempo promedio de carga de páginas fue inferior a 2 segundos.<br />
+              <strong>Conclusión:</strong> El rendimiento fue óptimo incluso bajo altas cargas.
+            </li>
+            <li>
+              <strong>Encuestas y Cuestionarios:</strong> Recolección de opiniones de usuarios sobre la experiencia general del sistema.<br />
+              <strong>Ejemplo:</strong> Se envió un cuestionario digital a empleados para evaluar la satisfacción general.<br />
+              <strong>Conclusión:</strong> El 95% de los encuestados calificaron el sistema como satisfactorio o excelente.
+            </li>
+          </ul>
+    
           <h3>5.2 Manuales</h3>
-          <p>Descripción de manuales...</p>
+          <p>
+            Los manuales entregados fueron diseñados para garantizar un uso eficiente y un mantenimiento adecuado del sistema ERP:
+          </p>
+          <ul>
+            <li>
+              <strong>Manual de Usuario:</strong> Guía detallada para empleados y gerentes sobre cómo utilizar los diferentes módulos del sistema, con ejemplos prácticos y soluciones a problemas comunes.
+            </li>
+            <li>
+              <strong>Manual del Programador:</strong> Documentación técnica que incluye la arquitectura del sistema, configuraciones de servidor, y procedimientos para realizar modificaciones y actualizaciones.
+            </li>
+          </ul>
+    
           <h3>5.3 Carta de entrega de producto</h3>
-          <p>Descripción de la carta de entrega...</p>
+          <p>
+            A continuación, se presenta un resumen de la carta de cierre entregada a Pollos Copacabana:
+          </p>
+          <p>
+            MVM Solutions confirma la culminación del proyecto para el desarrollo e implementación del Sistema ERP conforme a los Términos de Referencia y los acuerdos establecidos. El sistema entregado incluye los módulos de ventas, inventarios, control de sucursales y proveedores, finanzas, y control de usuarios. Además, se proporcionaron sesiones de capacitación, manuales de usuario y documentación técnica. Se garantiza soporte técnico durante los primeros 30 días.
+          </p>
+          <p>
+            Este proyecto marcó un hito importante para Pollos Copacabana al centralizar sus operaciones y mejorar la eficiencia en la toma de decisiones estratégicas.
+          </p>
         </>
       ),
       archivos: [
-        { nombre: "Manuales.pdf", url: "/path/to/Manuales.pdf" },
-        { nombre: "Carta_de_cierre.pdf", url: "/path/to/Carta_de_cierre.pdf" }
+        { nombre: "Carta_de_cierre.pdf", url: "/downloads/Carta_de_cierre.pdf" }
       ]
-    },
+    }
+    ,
   ];
 
   const handleNavClick = (index) => {
