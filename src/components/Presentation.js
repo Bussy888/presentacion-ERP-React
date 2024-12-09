@@ -474,7 +474,7 @@ const Presentacion = () => {
                   </ul>
                 </article>
                 <article>
-                  <h3>Sprint 3: Gestión de Clientes y Usuarios</h3>
+                  <h4>Sprint 3: Gestión de Clientes y Usuarios</h4>
                   <ul>
                     <li>Registrar clientes y gestionar preferencias.</li>
                     <li>Asignar roles y gestionar permisos de usuarios.</li>
@@ -985,7 +985,14 @@ const Presentacion = () => {
         {
           nombre: "Carta_de_cierre.pdf",
           url: "/downloads/Carta_de_cierre.pdf",
+        },{
+          nombre: "Manual_de_usuario.pdf",
+          url: "/downloads/Manual_de_usuario.pdf",
         },
+        {
+          nombre: "Manual_del_programador.pdf",
+          url: "/downloads/Manual_del_programador.pdf",
+        }
       ],
     },
   ];
