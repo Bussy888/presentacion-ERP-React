@@ -321,60 +321,97 @@ const Presentacion = () => {
           </ul>
 
           <h3>2.3 Gestión de riesgos</h3>
-          <p>
-            Para garantizar el éxito del proyecto, se documentaron los riesgos y
-            sus respectivos planes de contingencia utilizando el siguiente
-            formato:
-          </p>
-          <h4>Riesgos Identificados</h4>
-          <ul>
-            <li>
-              <strong>Problema:</strong> Fallas en la seguridad.
-              <br />
-              <strong>Probabilidad:</strong> Alta.
-              <br />
-              <strong>Impacto:</strong> Alto.
-              <br />
-              <strong>Descripción:</strong> Vulnerabilidades en el sistema
-              podrían comprometer datos sensibles y generar pérdidas económicas.
-              <br />
-              <strong>Plan de contingencia:</strong> Implementar auditorías de
-              seguridad periódicas, usar cifrado avanzado y realizar pruebas de
-              penetración antes del despliegue.
-            </li>
-            <p></p>
-            <li>
-              <strong>Problema:</strong> Falta de capacitación del personal.
-              <br />
-              <strong>Probabilidad:</strong> Media.
-              <br />
-              <strong>Impacto:</strong> Moderado.
-              <br />
-              <strong>Descripción:</strong> El personal no capacitado podría
-              tener dificultades para usar el sistema de manera eficiente, lo
-              que afectaría la productividad.
-              <br />
-              <strong>Plan de contingencia:</strong> Organizar talleres de
-              capacitación previos al despliegue y proporcionar manuales de
-              usuario detallados.
-            </li>
-            <p></p>
-            <li>
-              <strong>Problema:</strong> Fallos técnicos en los servidores
-              durante el despliegue.
-              <br />
-              <strong>Probabilidad:</strong> Baja.
-              <br />
-              <strong>Impacto:</strong> Alto.
-              <br />
-              <strong>Descripción:</strong> Problemas con la configuración o
-              capacidad de los servidores podrían retrasar la puesta en
-              producción.
-              <br />
-              <strong>Plan de contingencia:</strong> Configurar servidores de
-              respaldo y realizar pruebas de estrés antes del despliegue final.
-            </li>
-          </ul>
+<p>
+  Para garantizar el éxito del proyecto y alinear la gestión de riesgos con
+  estándares internacionales, se documentaron los riesgos y sus respectivos
+  planes de contingencia siguiendo el marco de la <strong>ISO 31000</strong> y
+  aplicando normas específicas como la <strong>ISO/IEC 27001</strong> para
+  seguridad.
+</p>
+<h4>Riesgos Identificados</h4>
+<ul>
+  <li>
+    <strong>Problema:</strong> Fallas en la seguridad.
+    <br />
+    <strong>Probabilidad:</strong> Alta.
+    <br />
+    <strong>Impacto:</strong> Alto.
+    <br />
+    <strong>Descripción:</strong> Vulnerabilidades en el sistema podrían
+    comprometer datos sensibles y generar pérdidas económicas.
+    <br />
+    <strong>Evaluación del riesgo:</strong> De acuerdo con la ISO/IEC 27001,
+    este riesgo se clasifica como crítico para la confidencialidad, integridad y
+    disponibilidad de la información.
+    <br />
+    <strong>Plan de tratamiento (ISO 31000 y 27001):</strong>
+    <ul>
+      <li>Implementar auditorías de seguridad periódicas.</li>
+      <li>Establecer cifrado avanzado (conforme a ISO/IEC 27002).</li>
+      <li>Realizar pruebas de penetración antes del despliegue.</li>
+      <li>
+        Garantizar que los controles sean monitoreados y evaluados
+        continuamente.
+      </li>
+    </ul>
+  </li>
+  <p></p>
+  <li>
+    <strong>Problema:</strong> Falta de capacitación del personal.
+    <br />
+    <strong>Probabilidad:</strong> Media.
+    <br />
+    <strong>Impacto:</strong> Moderado.
+    <br />
+    <strong>Descripción:</strong> El personal no capacitado podría tener
+    dificultades para usar el sistema de manera eficiente, lo que afectaría la
+    productividad.
+    <br />
+    <strong>Evaluación del riesgo:</strong> Este riesgo afecta la competencia
+    del personal y la continuidad del proyecto (alineado con ISO 9001 para
+    calidad).
+    <br />
+    <strong>Plan de tratamiento (ISO 31000):</strong>
+    <ul>
+      <li>Desarrollar un plan de capacitación integral.</li>
+      <li>
+        Proporcionar talleres prácticos y manuales conforme a las necesidades
+        operativas.
+      </li>
+      <li>
+        Realizar pruebas de conocimiento para asegurar que el personal esté
+        preparado.
+      </li>
+    </ul>
+  </li>
+  <p></p>
+  <li>
+    <strong>Problema:</strong> Fallos técnicos en los servidores durante el
+    despliegue.
+    <br />
+    <strong>Probabilidad:</strong> Baja.
+    <br />
+    <strong>Impacto:</strong> Alto.
+    <br />
+    <strong>Descripción:</strong> Problemas con la configuración o capacidad de
+    los servidores podrían retrasar la puesta en producción.
+    <br />
+    <strong>Evaluación del riesgo:</strong> Según las normas de ISO 22301
+    (Continuidad del Negocio), esto se considera un riesgo que puede afectar la
+    operación crítica del sistema.
+    <br />
+    <strong>Plan de tratamiento (ISO 31000 y 22301):</strong>
+    <ul>
+      <li>Configurar servidores de respaldo (plan de contingencia y recuperación).</li>
+      <li>Realizar pruebas de estrés y capacidad antes del despliegue final.</li>
+      <li>
+        Documentar procedimientos claros para la restauración en caso de
+        fallos.
+      </li>
+    </ul>
+  </li>
+</ul>
+
         </>
       ),
     },
